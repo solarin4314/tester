@@ -22,7 +22,7 @@
     
     BOOL fbState;
     BOOL ctState;
-     
+      
     
     IBOutlet UIButton *_loginBtn;
     
