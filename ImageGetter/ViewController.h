@@ -7,7 +7,37 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AddressBook/AddressBook.h>
+#import <AddressBookUI/AddressBookUI.h>
+#import <FacebookSDK/FacebookSDK.h>
+#include <dispatch/dispatch.h>
+#import "Reachability.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIAlertViewDelegate>
+{
+    NSArray *_modifyAddress;
+    
+    NSMutableDictionary *_myAddress;
+    NSMutableArray *_fbAddress;
+    
+    BOOL fbState;
+    BOOL ctState;
+    
+    
+    IBOutlet UIButton *_loginBtn;
+    
+    IBOutlet UIButton *_contactBtn;
+    
+    IBOutlet UIButton *_faceContactBtn;
+    
+    IBOutlet UIButton *_imageMergeBtn;
+    
+    UIBackgroundTaskIdentifier taskId;
+    
+    UIView *_dimmedView;
+    UIActivityIndicatorView *_indicator;
+    
+    UIView *_popViewer;
+}
 
 @end
